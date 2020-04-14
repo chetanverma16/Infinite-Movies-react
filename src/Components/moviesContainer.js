@@ -3,6 +3,7 @@ import Movie from './movie';
 import InfiniteScroll from "react-infinite-scroll-component";
 
 
+
 const MoviesContainer = () =>{
     const [movies,setMovies] = useState([])
     let [page,setPage] = useState(1)
@@ -31,34 +32,29 @@ const MoviesContainer = () =>{
     return (
       <div>
         <InfiniteScroll
-        style={{overflow:"hidden"}}
+          style={{ overflow: "hidden" }}
           dataLength={movies.length}
           next={fetchMoreMovies}
           hasMore={true}
-          loader={<h4>Loading...</h4>
-          }
+          loader={<h4>Loading...</h4>}
         >
-          <div className="movies_container">
-            {!movies ? (
-              <div>Loading...</div>
-            ) : (
-              movies.map((movie) => (
-                <Movie
-                  key={movie.id}
-                  poster_image={movie.poster_path}
-                  title={movie.title}
-                  overview={movie.overview}
-                  release_date={movie.release_date}
-                  vote_average={movie.vote_average}
-                ></Movie>
-              ))
-            )}
-          </div>
+            <div className="movies_container">
+              {!movies ? (
+                <div>Loading...</div>
+              ) : (
+                movies.map((movie) => (
+                  <Movie
+                    key={movie.id}
+                    poster_image={movie.poster_path}
+                    title={movie.title}
+                    overview={movie.overview}
+                    release_date={movie.release_date}
+                    vote_average={movie.vote_average}
+                  ></Movie>
+                ))
+              )}
+            </div>
         </InfiniteScroll>
-
-
-
-
       </div>
     );
 }
