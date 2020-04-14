@@ -44,21 +44,28 @@ body{
   top: 50px;
   width: 300px;
   height: 450px;
-  background:;
+  background:black;
   border-radius: 10px;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
   transform: translateX(-50%);
   transition: .5s;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
 }
 
 .card:hover {
   transition: .5s;
+  opacity: 1;
 }
 
 .card:hover .title {
   padding-bottom: 50px;
   opacity: 1;
   transition: .5s;
+
 }
 
 .card .title {
@@ -66,12 +73,16 @@ body{
   width: 100%;
   bottom: 0;
   left: 0;
-  font-size: 26px;
+  font-size: 1.5rem;
   font-weight: 300;
   padding: 30px 0;
-  background: linear-gradient(to top, #000, transparent);
-  text-transform: uppercase;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8153401008841037) 64%, rgba(0, 212, 255, 0) 100%);
   text-align: center;
   opacity: 0;
   transition: .5s;
+}
+
+.card .title p{
+  font-size: 1rem;
+
 }
