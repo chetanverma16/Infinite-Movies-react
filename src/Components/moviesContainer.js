@@ -9,7 +9,8 @@ const MoviesContainer = () =>{
     let [page,setPage] = useState(1)
 
     const url = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`;
-      async function fetchMoreMovies(){
+      
+    async function fetchMoreMovies(){
           let pageNumber = page+1
           setPage(pageNumber)
           const response = await fetch(url);
