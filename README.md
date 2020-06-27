@@ -1,4 +1,4 @@
-# Study Monk Infinite Loading Movies
+# Infinite Loading Movies
 
 ## Set up locally 
  - clone this repo
